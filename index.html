@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Échecs & Co</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>♞ Échecs & Co</h1>
+    <div class="header-right">
+      <span id="points">⭐ <span id="points-count">500</span> pts</span>
+      <button id="cart-btn">🛒 Panier (<span id="cart-count">0</span>)</button>
+    </div>
+  </header>
+
+  <nav id="filters"></nav>
+
+  <main>
+    <section id="products" class="grid"></section>
+  </main>
+
+  <!-- Fenêtre de description -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="modal-close" aria-label="Fermer">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+  <!-- Panneau panier -->
+  <aside id="cart-panel" class="cart-panel hidden">
+    <div class="cart-head">
+      <h2>🛒 Mon panier</h2>
+      <button id="cart-close" aria-label="Fermer">✕</button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-foot">
+      <p>Total : ⭐ <span id="cart-total">0</span> pts</p>
+      <p>Solde après achat : ⭐ <span id="cart-after">0</span> pts</p>
+      <button id="checkout-btn" class="buy-btn">Valider la commande</button>
+      <button id="clear-btn" class="link-btn">Vider le panier</button>
+    </div>
+  </aside>
+    <!-- Popup de message -->
+  <div id="popup" class="modal popup hidden">
+    <div class="modal-content popup-content">
+      <div id="popup-icon" class="popup-icon"></div>
+      <h2 id="popup-title"></h2>
+      <p id="popup-message"></p>
+      <button id="popup-ok" class="buy-btn">OK</button>
+    </div>
+  </div>
+  <script src="scrypte.js"></script>
+</body>
+</html>
